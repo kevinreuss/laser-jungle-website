@@ -305,10 +305,137 @@
         margin-bottom: 1.5rem;
       }
 
+      /* Projects Section */
+      .projects {
+        padding: 80px 0;
+        background: #f9fbfa;
+      }
+
+      .projects .section-title {
+        color: #0b3d2e;
+      }
+
+      .carousel {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        background: #fff;
+      }
+
+      .carousel-track {
+        display: flex;
+        transition: transform 0.5s ease;
+        will-change: transform;
+      }
+
+      .carousel-slide {
+        min-width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-rows: auto minmax(60px, auto);
+      }
+
+      .carousel-image {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+        display: block;
+      }
+
+      .carousel-caption {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 16px 20px;
+        background: linear-gradient(
+          0deg,
+          rgba(0, 0, 0, 0.55),
+          rgba(0, 0, 0, 0)
+        );
+        color: #f8fafc;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .carousel-caption p {
+        margin: 0;
+        font-size: 1.05rem;
+      }
+
+      .carousel-caption a {
+        color: #333;
+        background: linear-gradient(45deg, #d4af37, #f4d03f);
+        padding: 8px 14px;
+        border-radius: 999px;
+        text-decoration: none;
+        font-weight: 600;
+        white-space: nowrap;
+        box-shadow: 0 4px 15px rgba(212, 175, 55, 0.35);
+      }
+
+      .carousel-controls {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        pointer-events: none;
+      }
+
+      .carousel-button {
+        pointer-events: auto;
+        background: rgba(11, 61, 46, 0.6);
+        border: none;
+        color: #f8fafc;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        margin: 0 12px;
+        cursor: pointer;
+        transition: background 0.2s ease, transform 0.2s ease;
+      }
+
+      .carousel-button:hover {
+        background: rgba(11, 61, 46, 0.8);
+        transform: scale(1.05);
+      }
+
+      .carousel-indicators {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 12px;
+        display: flex;
+        gap: 8px;
+      }
+
+      .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid #f8fafc;
+        background: transparent;
+        opacity: 0.7;
+        cursor: pointer;
+        transition: opacity 0.2s ease, background 0.2s ease;
+      }
+
+      .carousel-indicators button[aria-current="true"] {
+        background: #d4af37;
+        border-color: #d4af37;
+        opacity: 1;
+      }
+
       /* Clients Section */
       .clients {
         padding: 80px 0;
-        background: #f9fbfa;
+        background: white;
       }
 
       .clients-grid {
@@ -442,6 +569,16 @@
           height: auto;
           margin-bottom: 1rem;
         }
+        .carousel-image {
+          height: 260px;
+        }
+        .carousel-button {
+          width: 40px;
+          height: 40px;
+        }
+        .carousel-caption p {
+          font-size: 0.95rem;
+        }
       }
 
       /* Hero logo */
@@ -473,6 +610,7 @@
             <ul class="nav-links">
               <!-- <li><a href="#home">Home</a></li> -->
               <li><a href="#services">Leistungen</a></li>
+              <li><a href="#projects">Projekte</a></li>
               <li><a href="#clients">Kunden</a></li>
               <li><a href="#about">Über uns</a></li>
               <a href="#contact" class="cta-button-small"
@@ -567,6 +705,78 @@
               rel="noopener"
               >Zum Shop</a
             >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section-title">Projekte</h2>
+        <div class="carousel" id="projectsCarousel">
+          <div class="carousel-track" data-index="0">
+            <div class="carousel-slide">
+              <img
+                src="media/projects/lb-lederwelt.png"
+                alt="LB-Lederwelt Website"
+                class="carousel-image"
+              />
+              <div class="carousel-caption">
+                <p>
+                  Erstellung eines Online-Shops und Logo-Design für LB-Lederwelt
+                </p>
+                <a
+                  href="https://lb-lederwelt.com/"
+                  target="_blank"
+                  rel="noopener"
+                  >Zum Shop</a
+                >
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="media/projects/kersten.png"
+                alt="LB-Lederwelt Website"
+                class="carousel-image"
+              />
+              <div class="carousel-caption">
+                <p>XXX</p>
+                <!-- <a href="#" target="_blank" rel="noopener">Zum Projekt</a> -->
+              </div>
+            </div>
+            <div class="carousel-slide">
+              <img
+                src="media/projects/sindy.png"
+                alt="LB-Lederwelt Website"
+                class="carousel-image"
+              />
+              <div class="carousel-caption">
+                <p>XXX</p>
+                <!-- <a href="#" target="_blank" rel="noopener">Zum Projekt</a> -->
+              </div>
+            </div>
+          </div>
+          <div class="carousel-controls">
+            <button
+              class="carousel-button"
+              data-direction="prev"
+              aria-label="Vorheriges Projekt"
+            >
+              ‹
+            </button>
+            <button
+              class="carousel-button"
+              data-direction="next"
+              aria-label="Nächstes Projekt"
+            >
+              ›
+            </button>
+          </div>
+          <div class="carousel-indicators" aria-label="Projekte Indikatoren">
+            <button aria-current="true" aria-label="Slide 1"></button>
+            <button aria-label="Slide 2"></button>
+            <button aria-label="Slide 3"></button>
           </div>
         </div>
       </div>
@@ -736,6 +946,85 @@
           header.style.background = "rgba(11, 61, 46, 0.9)";
         }
       });
+
+      // Projekte Carousel
+      (function () {
+        const carousel = document.getElementById("projectsCarousel");
+        if (!carousel) return;
+        const track = carousel.querySelector(".carousel-track");
+        const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+        const prevButton = carousel.querySelector('[data-direction="prev"]');
+        const nextButton = carousel.querySelector('[data-direction="next"]');
+        const indicators = Array.from(
+          carousel.querySelectorAll(".carousel-indicators button")
+        );
+        const slideCount = slides.length;
+        let currentIndex = 0;
+        let autoplayTimer = null;
+
+        function updateUI() {
+          track.style.transform = `translateX(-${currentIndex * 100}%)`;
+          indicators.forEach((btn, i) =>
+            btn.setAttribute("aria-current", String(i === currentIndex))
+          );
+        }
+
+        function goTo(index) {
+          currentIndex = (index + slideCount) % slideCount; // loop
+          updateUI();
+        }
+
+        function next() {
+          goTo(currentIndex + 1);
+        }
+
+        function prev() {
+          goTo(currentIndex - 1);
+        }
+
+        // Controls
+        nextButton && nextButton.addEventListener("click", next);
+        prevButton && prevButton.addEventListener("click", prev);
+        indicators.forEach((btn, i) =>
+          btn.addEventListener("click", () => goTo(i))
+        );
+
+        // Autoplay
+        function startAutoplay() {
+          stopAutoplay();
+          autoplayTimer = setInterval(next, 5000);
+        }
+        function stopAutoplay() {
+          if (autoplayTimer) clearInterval(autoplayTimer);
+          autoplayTimer = null;
+        }
+        startAutoplay();
+
+        // Pause on hover / focus
+        carousel.addEventListener("mouseenter", stopAutoplay);
+        carousel.addEventListener("mouseleave", startAutoplay);
+        carousel.addEventListener("focusin", stopAutoplay);
+        carousel.addEventListener("focusout", startAutoplay);
+
+        // Swipe support (basic)
+        let startX = 0;
+        let isDown = false;
+        track.addEventListener("touchstart", (e) => {
+          startX = e.touches[0].clientX;
+          isDown = true;
+        });
+        track.addEventListener("touchmove", (e) => {
+          if (!isDown) return;
+          const dx = e.touches[0].clientX - startX;
+          if (Math.abs(dx) > 40) {
+            dx < 0 ? next() : prev();
+            isDown = false;
+          }
+        });
+        track.addEventListener("touchend", () => {
+          isDown = false;
+        });
+      })();
     </script>
   </body>
 </html>
