@@ -277,7 +277,7 @@
 
       .clients-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         gap: 1.5rem;
         align-items: center;
       }
@@ -383,6 +383,10 @@
           grid-template-columns: 1fr;
         }
 
+        .clients-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
         .footer-content {
           flex-direction: column;
           text-align: center;
@@ -422,6 +426,7 @@
             <ul class="nav-links">
               <!-- <li><a href="#home">Home</a></li> -->
               <li><a href="#services">Leistungen</a></li>
+              <li><a href="#clients">Kunden</a></li>
               <li><a href="#about">Über uns</a></li>
               <li><a href="#contact">Kontakt</a></li>
             </ul>
@@ -441,43 +446,6 @@
         <h1>Willkommen bei Laser Jungle</h1>
         <p>Ihr Partner im Vogtland für kreative Projekte.</p>
         <a href="#contact" class="cta-button">Jetzt Kontakt aufnehmen</a>
-      </div>
-    </section>
-
-    <!-- Clients Section -->
-    <section id="clients" class="clients">
-      <div class="container">
-        <h2 class="section-title">Zufriedene Kunden</h2>
-        <div class="clients-grid">
-          <div class="client-logo" title="LB-Lederwelt">
-            <img src="media/clients/lb-lederwelt.png" alt="LB-Lederwelt" />
-          </div>
-          <div class="client-logo" title="A&U">
-            <img src="media/clients/aundu.png" alt="A&U" />
-          </div>
-          <div class="client-logo" title="stromlaufplan.de">
-            <img
-              src="media/clients/stromlaufplan.webp"
-              alt="stromlaufplan.de"
-            />
-          </div>
-          <div class="client-logo" title="Cindy Pehlke">
-            <img src="media/clients/cindy-pehlke.png" alt="Cindy Pehlke" />
-          </div>
-          <div class="client-logo" title="Kirsten">
-            <img src="media/clients/kirsten.png" alt="Kirsten" />
-          </div>
-          <div class="client-logo" title="Reuss Autoverwertungen">
-            <img src="media/clients/reuss.png" alt="Reuss Autoverwertungen" />
-          </div>
-          <div class="client-logo" title="LeTaS">
-            <img src="media/clients/letas.png" alt="LeTaS" />
-          </div>
-          <div class="client-logo" title="Dr. Matzat">
-            <img src="media/clients/drmatzat.jpg" alt="Dr. Matzat" />
-          </div>
-        </div>
-        <!-- Hinweis: Ersetze die DIVs oben später durch <img src="media/clients/NAME.png" alt="NAME" class="client-logo" /> sobald die Logos vorliegen. -->
       </div>
     </section>
 
@@ -555,6 +523,43 @@
       </div>
     </section>
 
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+      <div class="container">
+        <h2 class="section-title">Zufriedene Kunden</h2>
+        <div class="clients-grid">
+          <div class="client-logo" title="LB-Lederwelt">
+            <img src="media/clients/lb-lederwelt.png" alt="LB-Lederwelt" />
+          </div>
+          <div class="client-logo" title="A&U">
+            <img src="media/clients/aundu.png" alt="A&U" />
+          </div>
+          <div class="client-logo" title="stromlaufplan.de">
+            <img
+              src="media/clients/stromlaufplan.webp"
+              alt="stromlaufplan.de"
+            />
+          </div>
+          <div class="client-logo" title="Cindy Pehlke">
+            <img src="media/clients/cindy-pehlke.png" alt="Cindy Pehlke" />
+          </div>
+          <div class="client-logo" title="Kirsten">
+            <img src="media/clients/kirsten.png" alt="Kirsten" />
+          </div>
+          <div class="client-logo" title="Reuss Autoverwertungen">
+            <img src="media/clients/reuss.png" alt="Reuss Autoverwertungen" />
+          </div>
+          <div class="client-logo" title="LeTaS">
+            <img src="media/clients/letas.png" alt="LeTaS" />
+          </div>
+          <div class="client-logo" title="Dr. Matzat">
+            <img src="media/clients/drmatzat.jpg" alt="Dr. Matzat" />
+          </div>
+        </div>
+        <!-- Hinweis: Ersetze die DIVs oben später durch <img src="media/clients/NAME.png" alt="NAME" class="client-logo" /> sobald die Logos vorliegen. -->
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
       <div class="container">
@@ -567,6 +572,7 @@
               modernster Technik bringen wir Ihre Visionen zum Leben.
             </p>
             <p>Lassen Sie uns gemeinsam etwas Außergewöhnliches schaffen!</p>
+            <a href="#contact" class="cta-button">Jetzt Kontakt aufnehmen</a>
           </div>
           <div class="about-image">
             <img
